@@ -28,10 +28,10 @@ class Person
   }
 
   printHobbies(){
-    for (let i = 0 ; i< this.hobbies.length ; i++){
-      console.log("Sus Hobies son -" + this.hobbies[i])
+    
+      console.log("Sus Hobies son -" + this.hobbies)
   
-    }
+    
   }
 
 
