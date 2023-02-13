@@ -1,22 +1,22 @@
 function hasEven(myNums: number []){
   let i:number= 0;
   let comunicado:string = ""
+  let resultado :boolean  = true
 
-  while(i<myNums.length){
+  while(i<myNums.length && resultado == true){
 
-    if((myNums[i] % 2 == 0)){
-
-      comunicado = ("Hay un numero par")
-
-
+    if(myNums[i] %2 == 0){
+      comunicado = ("Hay numero par")
     }else{
-      comunicado = ("No hay un numero par")
+      comunicado = ("No hay numero par")
     }
-   
+    
     i++
   }
-  
+
+
   return comunicado
+
 
 }
 
@@ -43,4 +43,4 @@ return resultado
 
 console.log(startWithM (["maria","manuela"]))
 
-module.exports={hasEven}
+

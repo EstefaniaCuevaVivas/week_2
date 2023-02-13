@@ -54,7 +54,7 @@ function isRainbow(colors:string[]){
 isRainbow(["verde","azul","amarillo","negro"])
 
 
-function add(myWords:string[]){
+export function add(myWords:string[]){
 
   let arr:number = 0;
 
@@ -73,4 +73,3 @@ function add(myWords:string[]){
 
 console.log(add(["maria","ana"]))
 
-module.exports = {add}
