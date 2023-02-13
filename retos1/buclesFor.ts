@@ -72,3 +72,5 @@ function add(myWords:string[]){
 }
 
 console.log(add(["maria","ana"]))
+
+module.exports = {add}
