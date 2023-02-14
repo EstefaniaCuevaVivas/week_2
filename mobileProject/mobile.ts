@@ -57,7 +57,15 @@ export class Mobile{
   }
 
   public caracteristicas(){
-    console.log("The characteristics of the mobile name are:");
+    console.log("This is all my mobiles:");
+
+    console.log(".Name " + this.name);
+    console.log(".Trademark " + this.trademark);
+    console.log(".model " + this.model);
+    console.log(".color " + this.color);
+    console.log(".price " + this.price);
+
+    console.log("This is all my mobiles:");
 
     console.log(".Name " + this.name);
     console.log(".Trademark " + this.trademark);

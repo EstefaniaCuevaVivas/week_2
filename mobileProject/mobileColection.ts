@@ -4,13 +4,11 @@ import {Mobile} from "./mobile"
 export class MobileCollection{
   private mobiles: Mobile [];
   private totalPrice : number;
-  private totalPriceCalculation: number;
- 
+
 
   constructor(mobiles: Mobile[]){
     this.mobiles= mobiles;
-    this.totalPrice 
-    this.totalPriceCalculation
+    this.totalPrice = this.totalPriceCalculation()
   }
 
   public getMobiles(){
@@ -31,7 +29,7 @@ export class MobileCollection{
      this.totalPrice=newTotalPrice
    }
 
-   public getTotalPriceCalculation(): number {
+   public totalPriceCalculation(): number {
     let sum : number = 0;
     for (let i = 0; i < this.mobiles.length; i++) {
       sum += this.mobiles[i].getPrice();
@@ -40,14 +38,14 @@ export class MobileCollection{
   }
 
 
-  public setTotalPriceCalculation(newTotalPriceCalculation:number): void{
-     
-    this.totalPriceCalculation = newTotalPriceCalculation
-    
-  }
-
   public printCollection(){
-     return this.mobiles
+     for (let arrayMoviles of this.mobiles){
+
+      console.log(arrayMoviles.caracteristicas())
+
+     }
+
+     console.log ("Price overall: " + this.getTotalPrice())
     }
   }
     

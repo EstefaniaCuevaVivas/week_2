@@ -16,7 +16,8 @@ for(let i = 0 ; i<mobiles.length; i++){
   console.log(mobiles[i].getPrice())
 }
  
- console.log(myCollection.getTotalPriceCalculation())
+ console.log(myCollection.totalPriceCalculation())
+ console.log(myCollection.printCollection())
 
   
 
