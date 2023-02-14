@@ -53,6 +53,24 @@ export class Point{
     return Math.sqrt(diferenciaX*diferenciaX)+(diferenciaY*diferenciaY)
   }
 
+  public calculateQuadrant():number{
+    let variable:number = 0
+    if ( this.getX() == 0 && this.getY() == 0){
+      variable = 0
+    }else if ( this.getX() > 0 && this.getY() > 0){
+      variable = 1
+    }else if ( this.getX() < 0 && this.getY() > 0){
+      variable = 2
+    }else if ( this.getX() < 0 && this.getY() < 0){
+      variable = 3
+    }else if ( this.getX() > 0 && this.getY() < 0){
+      variable = 4
+    }
+
+    return variable
+
+  }
+    
   
 
 

@@ -31,6 +31,25 @@ var Point = /** @class */ (function () {
         var diferenciaY = this.getY() - anotherPoint.getY();
         return Math.sqrt(diferenciaX * diferenciaX) + (diferenciaY * diferenciaY);
     };
+    Point.prototype.calculateQuadrant = function () {
+        var variable = 0;
+        if (this.getX() == 0 && this.getY() == 0) {
+            variable = 0;
+        }
+        else if (this.getX() > 0 && this.getY() > 0) {
+            variable = 1;
+        }
+        else if (this.getX() < 0 && this.getY() > 0) {
+            variable = 2;
+        }
+        else if (this.getX() < 0 && this.getY() < 0) {
+            variable = 3;
+        }
+        else if (this.getX() > 0 && this.getY() < 0) {
+            variable = 4;
+        }
+        return variable;
+    };
     return Point;
 }());
 exports.Point = Point;
