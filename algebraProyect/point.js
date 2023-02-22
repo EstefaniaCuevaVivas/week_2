@@ -50,6 +50,18 @@ var Point = /** @class */ (function () {
         }
         return variable;
     };
+    Point.prototype.calculateNearest = function (points) {
+        var distanciaMinima = 3987654;
+        var puntoMinimo = points[0];
+        for (var i = 0; i < points.length; i++) {
+            var disActual = this.calculateDistance(points[i]);
+            if (disActual < distanciaMinima) {
+                distanciaMinima = disActual;
+            }
+            puntoMinimo = points[i];
+        }
+        return puntoMinimo;
+    };
     return Point;
 }());
 exports.Point = Point;

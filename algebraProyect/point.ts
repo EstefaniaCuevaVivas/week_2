@@ -70,9 +70,27 @@ export class Point{
     return variable
 
   }
+
+  calculateNearest(points : Point[]) : Point{
+
+    let distanciaMinima: number = 3987654;
+    let puntoMinimo : Point = points [0]
+    for ( let i = 0 ; i<points.length; i ++){
+
+      let disActual: number = this.calculateDistance(points[i])
+
+      if (disActual<distanciaMinima){
+        distanciaMinima = disActual
+        
+      }
+
+      puntoMinimo = points[i]
+    }
+
+    return puntoMinimo
+  }
     
   
-
 
 
 }
